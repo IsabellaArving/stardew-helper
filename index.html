@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley Helper</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" ref="stardew valley helper logo">  
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>Assistente de Stardew Valley</h2>
+                <p>Faça perguntas sobre o jogo Stardew Valley, como quando é o aniversário de um NPC, e em qual estação plantar tal vegetal.</p>
+                <form id="form">
+                    <input id="apiKey" type="password" placeholder="Gemini API Key" required>
+                    <input id="questionInput" type="text" placeholder="Ex: Quando é o aniversário da Robin, e o que dar de presente para ela?">
+                    <button id="askButton">
+                        Perguntar
+                    </button> 
+                </form>
+                <div id="aiResponse" class="hidden">
+                    <div class="response-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./script.js"></script> 
+</body>
+</html>
