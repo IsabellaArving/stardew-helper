@@ -1,0 +1,158 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-color: #121214;
+    color: white;
+}
+
+body * :root {
+    font-family: "Inter";
+    line-height: 160%;
+}
+
+header {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+header img {
+    width: 15rem;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3ren auto;
+}
+
+section {
+    background-image: transparent;
+    padding-top: 4px;
+    border-radius: 0.625;
+}
+
+section > div {
+    background-color: transparent;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+}
+section h2 {
+  letter-spacing: -0.47px;
+  color:#CE9305;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color:#654804a9;
+}
+/* Animações */
+main section {
+  opacity: 0;
+  transform: translateY(-2rem);
+
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display:flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin:1.25rem 0;
+}
+
+input {
+  all: unset;
+  border: 2px solid #9147ff;
+  border-radius: 0.5rem;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  background-color: #9fa1c6c5;
+}
+
+input {
+  flex:1;
+}
+
+button {
+  width: 100%;
+  border:0;
+  background-image: linear-gradient(245deg, #44d4f1 0%, #9bf46b 50%, #d1ce29 100%);
+  padding: 0.675rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12px;
+
+  transition: all 0.3s;
+}
+ /* pseudo-class */
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  cursor: not-allowed;
+  color: rgb(214, 246, 229);
+}
+
+
+#aiResponse {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #43E7AD;
+}
+
+#aiResponse p {
+    color: white;
+}
+
+#aiResponse ul{
+  padding-left: 1.5rem;
+  opacity: 0.5;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
